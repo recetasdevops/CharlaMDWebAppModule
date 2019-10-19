@@ -37,6 +37,10 @@ resource "azurerm_app_service" "pasionporlosbits_webapp" {
     type  = "SQLServer"
     value = "Server=tcp:${var.sql_database_name},1433;Initial Catalog=${var.sql_server_domain_name};Persist Security Info=False;User ID=${var.sql_user};Password=${var.sql_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
   }
+  
+   identity {
+    type = "SystemAssigned"
+  }
 
    tags = var.tags
 }

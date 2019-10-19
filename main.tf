@@ -65,7 +65,7 @@ resource "azurerm_app_service_certificate" "pasionporlosbits_certificate" {
 
 resource "dnsimple_record" "simpledns_pasionporlosbits_record_cname" {
   domain = var.dns_simple_domain
-  name   = "www"
+  name   = "staging"
   value  = var.url_site
   type   = "CNAME"
   ttl    = 60

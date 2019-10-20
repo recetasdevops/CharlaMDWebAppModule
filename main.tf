@@ -55,6 +55,8 @@ resource "azurerm_app_service_custom_hostname_binding" "pasionporlosbits_binding
   hostname            = var.complete_url_site
   app_service_name    = azurerm_app_service.pasionporlosbits_webapp.name
   resource_group_name = var.resource_group
+  ssl_state           = var.ssl_state
+  thumbprint          = var.cert_thumbprint
   
   depends_on = ["dnsimple_record.simpledns_pasionporlosbits_record","dnsimple_record.simpledns_pasionporlosbits_record_cname"]
 }

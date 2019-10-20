@@ -60,3 +60,7 @@ variable "cert_pfx_base64" {
 variable "dns_simple_domain" {
     type = string
 }
+
+variable "connection_string" {
+    type = string
+}

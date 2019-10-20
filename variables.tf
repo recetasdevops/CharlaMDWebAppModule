@@ -53,6 +53,10 @@ variable "cert_pfx_password" {
   type = string
 }
 
+variable "cert_thumbprint" {
+   type="string"
+}
+
 variable "cert_pfx_base64" {
   type = string 
 }
@@ -63,4 +67,9 @@ variable "dns_simple_domain" {
 
 variable "connection_string" {
     type = string
+}
+
+variable "ssl_state" {
+    type = string
+    default = "SniEnabled"
 }

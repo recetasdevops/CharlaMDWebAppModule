@@ -60,19 +60,3 @@ variable "cert_pfx_base64" {
 variable "dns_simple_domain" {
     type = string
 }
-
-variable "sql_database_name" {
-    type = string
-}
-
-variable "sql_server_domain_name" {
-  type = string
-}
-
-variable "sql_user" {
-  type = string
-}
-
-variable "sql_password" {
-  type = string
-}

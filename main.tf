@@ -100,7 +100,7 @@ resource "dnsimple_record" "simpledns_pasionporlosbits_record_cname" {
 
 resource "dnsimple_record" "simpledns_pasionporlosbits_record" {
   domain = var.dns_simple_domain
-  name   = ""
+  name   = "staging"
   value  = element(local.externalIp,0)
   type   = "A"
   ttl    = 3600
